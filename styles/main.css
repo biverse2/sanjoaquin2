@@ -1,7 +1,7 @@
 /* the styles for the elements */
 
 #nav_menu {
-	border-bottom: 3px solid #800000;
+	border-bottom: .2em solid #800000;
 	background-color: #800000;
 }
 
@@ -44,18 +44,17 @@ html {
 body {
 	font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
-    width: 800px;
+    width: 1200px;
     margin: 0 auto;
-    border: 3px solid #931420;
+    border: .1em solid #931420;
     background-color: #fffded;
 }
 a:focus, a:hover {
 	font-style: italic;
 }
-/* the styles for the header */
 header {
 	padding: 1.5em 0 2em 0;
-	border-bottom: 3px solid #931420;
+	border-bottom: .1em solid #931420;
 		background-image: -moz-linear-gradient(
 	    30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
 	background-image: -webkit-linear-gradient(
@@ -76,19 +75,18 @@ header h3 {
 	font-style: italic;
 }
 header img {
-	padding: 0 30px;
+	padding: 0 .5em;
 }
 .shadow {
-	text-shadow: 2px 2px 2px #800000;
+	text-shadow: .1em .1em .1em #800000;
 }
 main {
 	display: flex;
 	flex-direction: row-reverse;
 }
-/* the styles for the section */
 section {
-	width: 525px;
-	padding: 0 20px 20px 20px;
+	width: 95%;
+	padding: 0 .3em .3em .3em;
 }
 section h1 {
 	font-size: 150%;
@@ -114,11 +112,11 @@ section li {
 	padding-bottom: .35em;
 }
 
-/* the styles for the article */
+
 article {
 	padding: .5em 0;
-	border-top: 2px solid #800000;
-	border-bottom: 2px solid #800000;
+	border-top: .1em solid #800000;
+	border-bottom: .1em solid #800000;
 }
 article h2 {
 	padding-top: 0;
@@ -128,15 +126,15 @@ article h3 {
 	padding-bottom: .25em;
 }
 article img {
+	width: 30%;
 	float: right;
-	margin: .5em 0 1em 1em;
+	margin: 0.5em 0 1em 0;
 	border: 1px solid black;
 }
 
-/* the styles for the aside */
 aside {
-	width: 215px;
-	padding: 0 0 20px 20px;
+	width: 30%;
+	padding: 0 0 1em 1em;
 }
 aside h2 {
 	color: #800000;
@@ -151,7 +149,6 @@ aside img {
 	padding-bottom: 1em;
 }
 
-/* the styles for the footer */
 footer {
 	background-color: #931420;
 
@@ -160,4 +157,31 @@ footer p {
 	text-align: center;
 	color: white;
 	padding: 1em 0;
+}
+
+#mobilemenu {
+    display: none;
+}
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 900px) {
+    body {
+        box-shadow: none;
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 767px) {
+	#mobilemenu {
+		display: block;
+	}
+	main {
+		flex-direction: column;
+	}
+	section, aside {
+		max-width: 95%;
+	}
+
 }
