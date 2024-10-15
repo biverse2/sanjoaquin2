@@ -44,7 +44,8 @@ html {
 body {
 	font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
-    width: 1200px;
+    max-width: 1200px;
+	width: 70% ;
     margin: 0 auto;
     border: .1em solid #931420;
     background-color: #fffded;
@@ -182,6 +183,9 @@ footer p {
 	}
 	section, aside {
 		max-width: 95%;
+	}
+	#nav_menu {
+		display: none;
 	}
 
 }
